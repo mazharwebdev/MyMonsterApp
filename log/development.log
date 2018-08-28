@@ -1431,3 +1431,48 @@ Migrating to CreateMonsters (20180828134239)
             WHERE name='index_monsters_on_user_id' AND type='index'
 [0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (128.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMonster Load (0.4ms)[0m  [1m[34mSELECT "monsters".* FROM "monsters"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ari"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "auth_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "ari"], ["password_digest", "$2a$10$Re0jXwNT08.GZokR9dHsWOMzpqHphLB6JuengiBC8SCEgTgcwZhJi"], ["email", "ari@gmail.com"], ["auth_token", "hpQgDgAXdDFFeP8Uj5LGJqBV"], ["created_at", "2018-08-28 14:03:41.999156"], ["updated_at", "2018-08-28 14:03:41.999156"]]
+  [1m[35m (177.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "j"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "auth_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "j"], ["password_digest", "$2a$10$LhDxYSu631tTOOKDsSQr/O0BRz3rBbV9czbYTsEUYwNw7.DP9TWJm"], ["email", "jx@gmail.com"], ["auth_token", "Arg1fQ474sTX2SB2NR81Pu6T"], ["created_at", "2018-08-28 14:03:42.303379"], ["updated_at", "2018-08-28 14:03:42.303379"]]
+  [1m[35m (118.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "bell"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "auth_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "bell"], ["password_digest", "$2a$10$gW.K26HkKgLrEjstAcuheuUUAB2qOschDaPccFlSUgJO9Na2WsYpe"], ["email", "bell@ga.com"], ["auth_token", "fewi6sE74fha9UsJzuE5MRyr"], ["created_at", "2018-08-28 14:03:42.539489"], ["updated_at", "2018-08-28 14:03:42.539489"]]
+  [1m[35m (125.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dom"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "auth_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "dom"], ["password_digest", "$2a$10$SlMjQGWS/qVHl.h4giJFJuNtlm37FueSPbHaSJMrcSSYBHSWQMHW6"], ["email", "dom@ga.com"], ["auth_token", "WxdMr4drJ18yTLv81gg7PVHC"], ["created_at", "2018-08-28 14:03:42.733052"], ["updated_at", "2018-08-28 14:03:42.733052"]]
+  [1m[35m (156.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ramsay"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "auth_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "ramsay"], ["password_digest", "$2a$10$IKjQ8QSOWRFCMVE.YvNclOox8nInrLCMEAz0B0lOy2MNuE8dOjMWW"], ["email", "ramsay@ga.co"], ["auth_token", "nHqA3azEgFKKwBnE9UF2p44d"], ["created_at", "2018-08-28 14:03:43.009456"], ["updated_at", "2018-08-28 14:03:43.009456"]]
+  [1m[35m (127.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "drew"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "auth_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "drew"], ["password_digest", "$2a$10$3dWQs3EGhCCg125GU8WODuYqHSrbhQelZK.oeqDc9rdYEdAtSYHoK"], ["email", "drew@ga.co"], ["auth_token", "McVtXUT6bu8q7MLMYovpjF1b"], ["created_at", "2018-08-28 14:03:43.245902"], ["updated_at", "2018-08-28 14:03:43.245902"]]
+  [1m[35m (134.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "monsters" ("name", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "NMP Monster"], ["description", "NPM Monster Description"], ["user_id", 10], ["created_at", "2018-08-28 14:03:43.451553"], ["updated_at", "2018-08-28 14:03:43.451553"]]
+  [1m[35m (178.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "monsters" ("name", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "NMP Heroku Monster"], ["description", "NPM Monster Description deployed\n to heroku"], ["user_id", 10], ["created_at", "2018-08-28 14:03:43.635299"], ["updated_at", "2018-08-28 14:03:43.635299"]]
+  [1m[35m (181.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "monsters" ("name", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kotlin Monster"], ["description", "NPM Monster Description"], ["user_id", 11], ["created_at", "2018-08-28 14:03:43.823888"], ["updated_at", "2018-08-28 14:03:43.823888"]]
+  [1m[35m (216.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "monsters" ("name", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Java Monster"], ["description", "NPM Monster Description"], ["user_id", 11], ["created_at", "2018-08-28 14:03:44.046987"], ["updated_at", "2018-08-28 14:03:44.046987"]]
+  [1m[35m (139.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "monsters"[0m
