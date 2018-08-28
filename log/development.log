@@ -1476,3 +1476,158 @@ Migrating to CreateMonsters (20180828134239)
   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "monsters" ("name", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Java Monster"], ["description", "NPM Monster Description"], ["user_id", 11], ["created_at", "2018-08-28 14:03:44.046987"], ["updated_at", "2018-08-28 14:03:44.046987"]]
   [1m[35m (139.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "monsters"[0m
+Started GET "/monsters" for 127.0.0.1 at 2018-08-28 19:28:26 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MonstersController#index as */*
+  Parameters: {"monster"=>{}}
+  [1m[36mMonster Load (0.2ms)[0m  [1m[34mSELECT "monsters".* FROM "monsters"[0m
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/monsters/1" for 127.0.0.1 at 2018-08-28 19:28:57 +0500
+Processing by MonstersController#show as */*
+  Parameters: {"id"=>"1", "monster"=>{}}
+  [1m[36mMonster Load (0.5ms)[0m  [1m[34mSELECT  "monsters".* FROM "monsters" WHERE "monsters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/monsters/2" for 127.0.0.1 at 2018-08-28 19:29:00 +0500
+Processing by MonstersController#show as */*
+  Parameters: {"id"=>"2", "monster"=>{}}
+  [1m[36mMonster Load (0.2ms)[0m  [1m[34mSELECT  "monsters".* FROM "monsters" WHERE "monsters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/monsters/3" for 127.0.0.1 at 2018-08-28 19:29:01 +0500
+Processing by MonstersController#show as */*
+  Parameters: {"id"=>"3", "monster"=>{}}
+  [1m[36mMonster Load (0.2ms)[0m  [1m[34mSELECT  "monsters".* FROM "monsters" WHERE "monsters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/monsters/4" for 127.0.0.1 at 2018-08-28 19:29:03 +0500
+Processing by MonstersController#show as */*
+  Parameters: {"id"=>"4", "monster"=>{}}
+  [1m[36mMonster Load (0.1ms)[0m  [1m[34mSELECT  "monsters".* FROM "monsters" WHERE "monsters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/monsters/5" for 127.0.0.1 at 2018-08-28 19:29:04 +0500
+Processing by MonstersController#show as */*
+  Parameters: {"id"=>"5", "monster"=>{}}
+  [1m[36mMonster Load (0.2ms)[0m  [1m[34mSELECT  "monsters".* FROM "monsters" WHERE "monsters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Monster with 'id'=5):
+  
+app/controllers/monsters_controller.rb:10:in `show'
+Started GET "/monsters/6" for 127.0.0.1 at 2018-08-28 19:29:07 +0500
+Processing by MonstersController#show as */*
+  Parameters: {"id"=>"6", "monster"=>{}}
+  [1m[36mMonster Load (0.2ms)[0m  [1m[34mSELECT  "monsters".* FROM "monsters" WHERE "monsters"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Monster with 'id'=6):
+  
+app/controllers/monsters_controller.rb:10:in `show'
+Started GET "/monsters/4" for 127.0.0.1 at 2018-08-28 19:29:10 +0500
+Processing by MonstersController#show as */*
+  Parameters: {"id"=>"4", "monster"=>{}}
+  [1m[36mMonster Load (0.2ms)[0m  [1m[34mSELECT  "monsters".* FROM "monsters" WHERE "monsters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-28 19:29:52 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"j", "password"=>"[FILTERED]", "session"=>{"username"=>"j", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "j"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["username", "j"], ["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "auth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["auth_token", "bbJK8nLsMGiTWk8HfbPhs1iv"], ["updated_at", "2018-08-28 14:29:52.688405"], ["id", 7]]
+  [1m[35m (175.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 288ms (Views: 0.4ms | ActiveRecord: 178.1ms)
+
+
+Started POST "/monsters/" for 127.0.0.1 at 2018-08-28 19:32:53 +0500
+Processing by MonstersController#create as */*
+  Parameters: {"monster"=>{"name"=>"Mr Moons", "description"=>"Mr Moons Description"}}
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/monsters/" for 127.0.0.1 at 2018-08-28 19:34:25 +0500
+Processing by MonstersController#create as */*
+  Parameters: {"monster"=>{"name"=>"Mr Moons", "description"=>"Mr Moons Description"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "bbJK8nLsMGiTWk8HfbPhs1iv"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "bbJK8nLsMGiTWk8HfbPhs1iv"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "monsters" ("name", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mr Moons"], ["description", "Mr Moons Description"], ["user_id", 7], ["created_at", "2018-08-28 14:34:25.126560"], ["updated_at", "2018-08-28 14:34:25.126560"]]
+  [1m[35m (217.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 249ms (Views: 0.8ms | ActiveRecord: 218.4ms)
+
+
+Started POST "/profile/" for 127.0.0.1 at 2018-08-28 19:35:12 +0500
+  
+ActionController::RoutingError (No route matches [POST] "/profile"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 19:35:33 +0500
+Processing by UsersController#profile as */*
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 19:35:57 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "bbJK8nLsMGiTWk8HfbPhs1iv"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "bbJK8nLsMGiTWk8HfbPhs1iv"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `monster' for #<User:0x00000004dd3c28>
+Did you mean?  monsters
+               monsters=):
+  
+app/controllers/users_controller.rb:11:in `profile'
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 19:36:51 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "bbJK8nLsMGiTWk8HfbPhs1iv"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "bbJK8nLsMGiTWk8HfbPhs1iv"], ["LIMIT", 1]]
+  [1m[36mMonster Load (0.2ms)[0m  [1m[34mSELECT "monsters".* FROM "monsters" WHERE "monsters"."user_id" = ?[0m  [["user_id", 7]]
+Completed 200 OK in 133ms (Views: 53.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 19:37:32 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
