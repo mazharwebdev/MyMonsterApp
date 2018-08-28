@@ -12,3 +12,1401 @@ Migrating to CreateUsers (20180828074242)
   [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-28 07:47:05.312999"], ["updated_at", "2018-08-28 07:47:05.312999"]]
   [1m[35m (171.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-08-28 13:58:13 +0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 64ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-08-28 13:58:14 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users?username=001test&password=[FILTERED]&email=test@test.com&name=test" for 127.0.0.1 at 2018-08-28 14:03:13 +0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"001test", "password"=>"[FILTERED]", "email"=>"test@test.com", "name"=>"test"}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:10:07 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:11:47 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 5ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:13:33 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 1ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:14:49 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 3ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:19:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:15:06 +0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:19:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:19:47 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 6ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:22:13 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 196ms (ActiveRecord: 2.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:23:52 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 23ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:26:03 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:26:21 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:26:29 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:26:30 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:26:31 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:26:31 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:26:32 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:34:25 +0500
+Processing by UsersController#create as */*
+  [1m[35m (59.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (198.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 312ms (ActiveRecord: 258.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:37:37 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\n\t\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\n\t\n\t}\n\n\n\n\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 74ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:39:36 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:44:03 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:44:04 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 1ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:44:05 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:44:06 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started GET "/users" for 127.0.0.1 at 2018-08-28 14:44:19 +0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:44:34 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:44:54 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:45:06 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:47:57 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 70ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:51:01 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 5ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:51:23 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 1ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:7:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:51:59 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 1ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:7:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:52:37 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 3ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:53:20 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:53:57 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 8ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:19:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:54:16 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 1ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:19:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 14:54:45 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 1ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:19:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 15:04:12 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 5ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:07:49 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:08:05 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:08:07 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:12:25 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:13:12 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 5ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:16:in `user_params11'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:13:52 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 144282ms
+
+
+Started POST "/users?username=test&password=[FILTERED]&email=test@test.com&name=TestName" for 127.0.0.1 at 2018-08-28 16:16:16 +0500
+  
+Processing by UsersController#create as */*
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "email"=>"test@test.com", "name"=>"TestName"}
+  
+app/controllers/users_controller.rb:17:in `user_params11'
+app/controllers/users_controller.rb:6:in `create'
+Completed 400 Bad Request in 2427ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:17:in `user_params11'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users?username=test&password=[FILTERED]&email=test@test.com&name=TestName" for 127.0.0.1 at 2018-08-28 16:16:29 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "email"=>"test@test.com", "name"=>"TestName"}
+Completed 400 Bad Request in 87623ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:17:in `user_params11'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users?username=test&password=[FILTERED]&email=test@test.com&name=TestName" for 127.0.0.1 at 2018-08-28 16:18:09 +0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "email"=>"test@test.com", "name"=>"TestName"}
+Completed 400 Bad Request in 263650ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:17:in `user_params11'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:22:47 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/ubuntu/project/work/react-rails/MyMonstarApp/app/controllers/users_controller.rb:10: syntax error, unexpected keyword_if, expecting ')'
+    if input.save
+      ^):
+  
+app/controllers/users_controller.rb:10: syntax error, unexpected keyword_if, expecting ')'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:23:33 +0500
+  
+SyntaxError (/home/ubuntu/project/work/react-rails/MyMonstarApp/app/controllers/users_controller.rb:10: syntax error, unexpected keyword_if, expecting ')'
+    if user.save!
+      ^):
+  
+app/controllers/users_controller.rb:10: syntax error, unexpected keyword_if, expecting ')'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:24:13 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 96ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:25:13 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 31ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:27:53 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:29:25 +0500
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 14ms
+
+
+  
+NoMethodError (undefined method `new?' for User (call 'User.connection' to establish a connection):Class
+Did you mean?  new):
+  
+app/models/user.rb:6:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:29:53 +0500
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 20ms
+
+
+  
+NoMethodError (undefined method `create?' for User (call 'User.connection' to establish a connection):Class
+Did you mean?  create
+               create!):
+  
+app/models/user.rb:6:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:30:14 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 38ms (ActiveRecord: 2.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Password can't be blank, Password is too short (minimum is 6 characters), Password confirmation can't be blank):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:30:43 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Password can't be blank, Password is too short (minimum is 6 characters), Password confirmation can't be blank):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:32:44 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 112769ms (ActiveRecord: 3.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Password can't be blank, Password is too short (minimum is 6 characters), Password confirmation can't be blank):
+  
+app/controllers/users_controller.rb:11:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:34:53 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 400 Bad Request in 23ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:25:in `user_params11'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:35:14 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+Completed 400 Bad Request in 29ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:25:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:35:25 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: data):
+  
+app/controllers/users_controller.rb:25:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:36:31 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 545945ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:45:37 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 1898ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:45:50 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 142645ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:48:24 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Unpermitted parameter: :{
+"user":{
+		"username": "001test",
+		"password": "test",
+		"email": "test@test.com",
+		"name": "test"
+		}
+}
+Unpermitted parameter: :{
+"user":{
+		"username": "001test",
+		"password": "test",
+		"email": "test@test.com",
+		"name": "test"
+		}
+}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 52244ms (ActiveRecord: 2.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:49:34 +0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"test\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Unpermitted parameter: :{
+"user":{
+		"username": "001test",
+		"password": "test",
+		"email": "test@test.com",
+		"name": "test"
+		}
+}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 21ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:50:12 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"123456789\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Unpermitted parameter: :{
+"user":{
+		"username": "001test",
+		"password": "123456789",
+		"email": "test@test.com",
+		"name": "test"
+		}
+}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:54:08 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"123456789\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Unpermitted parameter: :{
+"user":{
+		"username": "001test",
+		"password": "123456789",
+		"email": "test@test.com",
+		"name": "test"
+		}
+}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35mSQL (16.5ms)[0m  [1m[32mINSERT INTO "users" ("auth_token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["auth_token", "dr4A79GMZFLzeVY2h3vvfBdg"], ["created_at", "2018-08-28 11:54:18.804837"], ["updated_at", "2018-08-28 11:54:18.804837"]]
+  [1m[35m (116.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 171ms (Views: 0.4ms | ActiveRecord: 134.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:55:11 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test\",\n\t\t\"password\": \"\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Unpermitted parameter: :{
+"user":{
+		"username": "001test",
+		"password": "",
+		"email": "test@test.com",
+		"name": "test"
+		}
+}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:55:19 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test1\",\n\t\t\"password\": \"\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Unpermitted parameter: :{
+"user":{
+		"username": "001test1",
+		"password": "",
+		"email": "test@test.com",
+		"name": "test"
+		}
+}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:55:29 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test111\",\n\t\t\"password\": \"\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Unpermitted parameter: :{
+"user":{
+		"username": "001test111",
+		"password": "",
+		"email": "test@test.com",
+		"name": "test"
+		}
+}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:55:46 +0500
+Processing by UsersController#create as */*
+  Parameters: {"{\n\"user\":{\n\t\t\"username\": \"001test111\",\n\t\t\"password\": \"123456\",\n\t\t\"email\": \"test@test.com\",\n\t\t\"name\": \"test\"\n\t\t}\n}"=>"[FILTERED]"}
+Unpermitted parameter: :{
+"user":{
+		"username": "001test111",
+		"password": "123456",
+		"email": "test@test.com",
+		"name": "test"
+		}
+}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35mSQL (121.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-28 16:59:43 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("auth_token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["auth_token", "Z5bEfy7wJPZR4RjZcxtnRNtR"], ["created_at", "2018-08-28 11:59:43.590225"], ["updated_at", "2018-08-28 11:59:43.590225"]]
+  [1m[35m (173.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 199ms (Views: 0.4ms | ActiveRecord: 176.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:04:13 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 35645ms (ActiveRecord: 2.9ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:05:28 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 22ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+  [1m[35mSQL (239.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:06:42 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("auth_token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["auth_token", "SBHWVWs6PMfxv2j1zDCaQ3tV"], ["created_at", "2018-08-28 12:06:42.790983"], ["updated_at", "2018-08-28 12:06:42.790983"]]
+  [1m[35m (134.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35mSQL (122.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+Completed 200 OK in 116266ms (Views: 0.6ms | ActiveRecord: 136.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:08:52 +0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("auth_token", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["auth_token", "97uLzqw5pjQ7TwWhsWbmaJ8r"], ["created_at", "2018-08-28 12:08:52.294205"], ["updated_at", "2018-08-28 12:08:52.294205"]]
+  [1m[35m (159.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 178ms (Views: 0.6ms | ActiveRecord: 161.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-28 17:10:38 +0500
+Processing by SessionsController#create as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/models/user.rb:13:in `validate_login'
+app/controllers/sessions_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:13:31 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 39ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken, Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+  [1m[35mSQL (135.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:15:30 +0500
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 4ms
+
+
+  
+NoMethodError (undefined method `password=' for <ActionController::Parameters {} permitted: true>:ActionController::Parameters):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:16:01 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 20ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:16:27 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 209344ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:7:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:20:08 +0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 66747ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:21:22 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 200028ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:24:48 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 307111ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:30:01 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:38:38 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:38:48 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:51:32 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:17:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:52:04 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (18.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 47ms (ActiveRecord: 19.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:52:32 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 28ms (ActiveRecord: 2.5ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:52:44 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:57:44 +0500
+  
+SyntaxError (/home/ubuntu/project/work/react-rails/MyMonstarApp/app/controllers/users_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:58:18 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 28991ms (ActiveRecord: 2.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:58:58 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 21ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 17:59:51 +0500
+Processing by UsersController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 35ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 18:01:08 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 3ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 18:01:49 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 18:02:05 +0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:16:in `user_params'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-08-28 18:03:44 +0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"001test", "password"=>"[FILTERED]", "email"=>"test@test.com", "name"=>"test"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "001test"], ["LIMIT", 1]]
+  [1m[35mSQL (42.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "name", "auth_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "001test"], ["password_digest", "$2a$10$0l6afanXDRpsq0TUtyuqkOm7/WSATUVp7uhtcvboAyM8ZUntORNZu"], ["email", "test@test.com"], ["name", "test"], ["auth_token", "m4Nj3e1SU4PvRfXGanV7vARE"], ["created_at", "2018-08-28 13:03:44.366635"], ["updated_at", "2018-08-28 13:03:44.366635"]]
+  [1m[35m (170.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 305ms (Views: 0.3ms | ActiveRecord: 214.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-28 18:20:16 +0500
+Processing by SessionsController#create as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (Views: 1.5ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2018-08-28 18:22:20 +0500
+Processing by SessionsController#create as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 10ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-28 18:27:54 +0500
+Processing by SessionsController#create as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 10ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-28 18:28:16 +0500
+Processing by SessionsController#create as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 72216ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-28 18:29:51 +0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"001test", "password"=>"[FILTERED]", "session"=>{"username"=>"001test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "001test"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["username", "001test"], ["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (18.0ms)[0m  [1m[33mUPDATE "users" SET "auth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["auth_token", "53vXhvUUHKJhpFzW1V1NrJyp"], ["updated_at", "2018-08-28 13:30:20.797668"], ["id", 5]]
+  [1m[35m (141.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 29534ms (Views: 0.5ms | ActiveRecord: 161.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-08-28 18:30:31 +0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"001test", "password"=>"[FILTERED]", "session"=>{"username"=>"001test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "001test"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["username", "001test"], ["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "auth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["auth_token", "88oQqZUQcyNkeN71p7b8kUCg"], ["updated_at", "2018-08-28 13:30:31.625316"], ["id", 5]]
+  [1m[35m (113.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 206ms (Views: 0.5ms | ActiveRecord: 116.1ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:32:56 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:33:39 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:33:51 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:34:05 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:34:30 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "m4Nj3e1SU4PvRfXGanV7vARE"], ["LIMIT", 1]]
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:34:32 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "m4Nj3e1SU4PvRfXGanV7vARE"], ["LIMIT", 1]]
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:34:32 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "m4Nj3e1SU4PvRfXGanV7vARE"], ["LIMIT", 1]]
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:34:33 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "m4Nj3e1SU4PvRfXGanV7vARE"], ["LIMIT", 1]]
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:34:57 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "88oQqZUQcyNkeN71p7b8kUCg"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `header' for #<ActionDispatch::Request:0x0000000493b0a8>
+Did you mean?  headers
+               head?):
+  
+app/controllers/users_controller.rb:10:in `profile'
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:36:59 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "88oQqZUQcyNkeN71p7b8kUCg"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `header' for #<ActionDispatch::Request:0x00000004b85318>
+Did you mean?  headers
+               head?):
+  
+app/controllers/users_controller.rb:11:in `profile'
+Started GET "/profile" for 127.0.0.1 at 2018-08-28 18:37:46 +0500
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "88oQqZUQcyNkeN71p7b8kUCg"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT ?[0m  [["auth_token", "88oQqZUQcyNkeN71p7b8kUCg"], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 2.1ms)
+
+
