@@ -1664,3 +1664,16 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/monsters" for 127.0.0.1 at 2018-08-29 13:42:37 +0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MonstersController#index as */*
+  [1m[36mMonster Load (0.3ms)[0m  [1m[34mSELECT "monsters".* FROM "monsters"[0m
+Completed 200 OK in 137ms (Views: 40.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/monsters" for 127.0.0.1 at 2018-08-29 13:42:43 +0500
+Processing by MonstersController#index as */*
+  [1m[36mMonster Load (0.2ms)[0m  [1m[34mSELECT "monsters".* FROM "monsters"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
