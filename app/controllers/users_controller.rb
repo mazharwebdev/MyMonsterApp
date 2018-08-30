@@ -9,9 +9,20 @@ class UsersController < ApiController
   def profile
     user = User.find_by_auth_token!(request.headers[:token])
     user_monsters = user.monsters
-    render json: {user: {username: user.username, email: user.email, name: user.name}, monsters:
+    render json: {user: {username: user.username, email: user.email, name: user.name, admin: user.admin}, monsters:
      user_monsters}
   end
+
+  def userprofile
+    user = User.find_by_auth_token!(request.headers[:token])
+    user_monsters = user.monsters
+    render json: {user: {username: user.username, email: user.email, name: user.name, admin: user.admin}}
+  end
+
+  def getAllUsers
+    users = User.all.where(admin: false)
+    render json: {users: users}
+  end  
 
   private
   def user_params

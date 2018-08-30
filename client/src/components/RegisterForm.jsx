@@ -24,15 +24,25 @@ class RegisterFrom extends Component{
   render(){
     return(
       <div className="form">
+        <br />
+        <h3> Registeration </h3>
         <form onSubmit={(e) => this.props.handleRegisterSubmit(e,this.state)} >
           <input type="text" name="username" placeholder="username" value={this.state.username} 
           onChange={this.handleChange} />
+          <br />
+          <br />
           <input type="password" name="password" placeholder="password" value={this.state.password} 
           onChange={this.handleChange} />
+          <br />
+          <br />
           <input type="email" name="email" placeholder="email" value={this.state.email} 
           onChange={this.handleChange} />
-           <input type="text" name="name" placeholder="name" value={this.state.name} 
+          <br />
+          <br />
+          <input type="text" name="name" placeholder="name" value={this.state.name} 
           onChange={this.handleChange} />
+          <br />
+          <br />
           <input type="submit" value="Register!" />
         </form>
       </div> 

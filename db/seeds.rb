@@ -4,12 +4,13 @@ User.destroy_all
 Monster.destroy_all
 
 
-ari = User.create!(username: 'ari', email: 'ari@gmail.com', password: 'password')
-j = User.create!(username: 'j', email: 'jx@gmail.com', password: 'password')
-bell = User.create!(username: 'bell', email: 'bell@ga.com', password: 'password')
-dom = User.create!(username: 'dom', email: 'dom@ga.com', password: 'password')
-ramsay = User.create!(username: 'ramsay', email: 'ramsay@ga.co', password: 'password')
-drew = User.create!(username: 'drew', email: 'drew@ga.co', password: 'password')
+admin = User.create!(username: 'admin', name: 'AdminName', email: 'admin@gmail.com', password: 'admin',admin: true)
+ari = User.create!(username: 'ari', name: 'Ari', email: 'ari@gmail.com', password: 'password')
+j = User.create!(username: 'j',name: 'J', email: 'jx@gmail.com', password: 'password')
+bell = User.create!(username: 'bell', name: 'Bell', email: 'bell@ga.com', password: 'password')
+dom = User.create!(username: 'dom', name: 'Dom', email: 'dom@ga.com', password: 'password')
+ramsay = User.create!(username: 'ramsay',name: 'Ramsay', email: 'ramsay@ga.co', password: 'password')
+drew = User.create!(username: 'drew', name: "Drew", email: 'drew@ga.co', password: 'password')
 
 puts "#{User.count} Users Created!"
 

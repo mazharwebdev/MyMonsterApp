@@ -9,6 +9,9 @@ import MonsterList from './components/MonsterList';
 import RegisterForm from './components/RegisterForm';
 import LoginForm from './components/LoginForm';
 import Dashboard from './components/Dashboard';
+import AdminDashboard from './components/AdminDashboard';
+import UserDashboard from './components/UserDashboard';
+import Home from './components/Home';
 
 class App extends Component {
   constructor(){
@@ -92,9 +95,7 @@ class App extends Component {
           <div className="nav">
             <Link to="/login"> Login </Link>
             <Link to="/register"> Register </Link>
-            <Link to="/dash"> Dash </Link>
-            <Link to="/monsters"> Monsters </Link>
-           <button onClick= {this.handleLogout} className="button"> Log out </button>
+            <button onClick= {this.handleLogout} className="button"> Log out </button>
 
           </div>
 
@@ -104,21 +105,21 @@ class App extends Component {
 
           <Route exact path="/register" 
           render= {() => (this.state.auth) 
-            ? <Redirect to="/dash" /> 
+            ? <Redirect to="/home" /> 
             : <RegisterForm 
             handleRegisterSubmit =
             {this.handleRegisterSubmit} />} />
 
           <Route exact path="/login" 
           render= {() => (this.state.auth) 
-            ? <Redirect to="/dash" /> 
+            ? <Redirect to="/home" /> 
             : <LoginForm 
             handleLoginSubmit =
             {this.handleLoginSubmit} />} /> 
 
           <Route 
-            exact path="/dash"
-            render={() => <Dashboard /> } />      
+            exact path="/home"
+            render={() => <Home /> } />      
         
         </div>
 
