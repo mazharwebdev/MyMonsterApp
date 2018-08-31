@@ -12,6 +12,7 @@ class Home extends React.Component {
     super(props);
     this.state ={
       profileAdmin: null,
+      auth: Auth.isUserAuthenticated(),
     }
   }
 

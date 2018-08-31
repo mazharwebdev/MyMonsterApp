@@ -22,7 +22,17 @@ class UsersController < ApiController
   def getAllUsers
     users = User.all.where(admin: false)
     render json: {users: users}
-  end  
+  end 
+
+  def destroy
+    User.destroy(params[:id])
+  end 
+
+  def update
+    user = User.find(params[:id])
+    user.update_attributes(user_params)
+    render json: user
+  end
 
   private
   def user_params

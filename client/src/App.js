@@ -91,17 +91,13 @@ class App extends Component {
     return (
       <Router>
         <div className="App"> 
-
+          
           <div className="nav">
             <Link to="/login"> Login </Link>
             <Link to="/register"> Register </Link>
             <button onClick= {this.handleLogout} className="button"> Log out </button>
-
           </div>
 
-
-          <Route exact path="/monsters" render= {()=>
-             <MonsterList /> } />
 
           <Route exact path="/register" 
           render= {() => (this.state.auth) 
