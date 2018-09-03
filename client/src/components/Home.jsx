@@ -43,7 +43,7 @@ render(){
     return (
       <div className="dash">
            
-           {this.state.profileAdmin == true ? <AdminDashboard />: <UserDashboard /> }
+           {this.state.profileAdmin === true ? <AdminDashboard />: <UserDashboard /> }
 
          
            

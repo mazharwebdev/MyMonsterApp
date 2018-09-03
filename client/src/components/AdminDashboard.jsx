@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Auth from '../modules/Auth';
 
+
 function searchingFor(term){
   return function(x){
     return x.name.toLowerCase().includes(term.toLowerCase()) || !term;
@@ -13,6 +14,9 @@ class AdminDashboard extends Component{
   constructor(){
     super();
     this.state ={
+      name: '',
+      email: '',
+      username: '',
       auth: Auth.isUserAuthenticated(),
       allUsers: null,
       usersLoaded: false,
@@ -102,7 +106,7 @@ class AdminDashboard extends Component{
 
   }
 
-   handleChange(e){
+  handleChange(e){
     const name = e.target.name;
     const val = e.target.value;
     this.setState({
@@ -127,14 +131,11 @@ class AdminDashboard extends Component{
                 <br />
                 <h3> Edit User </h3>
                 <form onSubmit={(e) => this.handleUpdate(this.state.editUser)}>
-                  <input type="text" name="username" placeholder="username" value={this.state.editUser.username} onChange={this.handleChange} />
-                  <br />
-                  <br />
-                  <input type="email" name="email" placeholder="email" value={this.state.editUser.email} 
+                  <p>username:</p><input type="text" name="username" placeholder="username" value={this.state.editUser.username} 
                   onChange={this.handleChange} />
-                  <br />
-                  <br />
-                  <input type="text" name="name" placeholder="name" value={this.state.editUser.name}
+                  <p>Email:</p><input type="email" name="email" placeholder="email" value={this.state.editUser.email} 
+                  onChange={this.handleChange} />
+                  <p>Name:</p><input type="text" name="name" placeholder="name" value={this.state.editUser.name}
                   onChange={this.handleChange} />
                   <br />
                   <br />

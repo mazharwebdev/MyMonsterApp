@@ -91,7 +91,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App"> 
-          
+          <h3> React Rails Monstar App </h3>
           <div className="nav">
             <Link to="/login"> Login </Link>
             <Link to="/register"> Register </Link>
