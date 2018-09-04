@@ -57,11 +57,21 @@ class App extends Component {
       }
     }).then(res => res.json())
         .then(res => {
+          console.log(res.token);
+          if(res.token !== undefined)
+          {
           Auth.authenticateToken(res.token);
           this.setState({
             auth: Auth.isUserAuthenticated(),
             //shouldGoToDash: true,
           });
+          }else{
+            this.setState({
+            auth: false,
+            //shouldGoToDash: true,
+          });
+          }
+          console.log(Auth.isUserAuthenticated());
         }).catch(err => {
           console.log(err);
         })
@@ -77,6 +87,7 @@ class App extends Component {
         'Authorization': `Token ${Auth.getToken()}`, 
       }
     }).then(res => {
+    
       Auth.deauthenticateToken();
       this.setState({
         auth: Auth.isUserAuthenticated(),
@@ -91,11 +102,19 @@ class App extends Component {
     return (
       <Router>
         <div className="App"> 
-          <h3> React Rails Monstar App </h3>
+          <h3> React Rails App </h3>
           <div className="nav">
             <Link to="/login"> Login </Link>
             <Link to="/register"> Register </Link>
-            <button onClick= {this.handleLogout} className="button"> Log out </button>
+            {this.state.auth?
+
+              (<button onClick= {this.handleLogout} class="button btn btn-default"> Log out </button>
+              )
+              :
+              (
+                <h6> </h6>
+              )
+            }
           </div>
 
 

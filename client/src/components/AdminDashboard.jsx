@@ -131,11 +131,11 @@ class AdminDashboard extends Component{
                 <br />
                 <h3> Edit User </h3>
                 <form onSubmit={(e) => this.handleUpdate(this.state.editUser)}>
-                  <p>username:</p><input type="text" name="username" placeholder="username" value={this.state.editUser.username} 
+                  <p>username:</p><input type="text" name="username" class="form-control" placeholder="username" value={this.state.editUser.username} 
                   onChange={this.handleChange} />
-                  <p>Email:</p><input type="email" name="email" placeholder="email" value={this.state.editUser.email} 
+                  <p>Email:</p><input type="email" name="email" class="form-control" placeholder="email" value={this.state.editUser.email} 
                   onChange={this.handleChange} />
-                  <p>Name:</p><input type="text" name="name" placeholder="name" value={this.state.editUser.name}
+                  <p>Name:</p><input type="text" name="name" class="form-control" placeholder="name" value={this.state.editUser.name}
                   onChange={this.handleChange} />
                   <br />
                   <br />

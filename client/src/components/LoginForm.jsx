@@ -28,15 +28,15 @@ class LoginForm extends Component{
         <br />
         <h3> Login </h3>
         <form onSubmit={(e) => this.props.handleLoginSubmit(e,this.state)} >
-          <input type="text" name="username" placeholder="username" value={this.state.username} 
+          <input type="text" name="username" class="form-control" placeholder="username" value={this.state.username} 
           onChange={this.handleChange} />
           <br />
           <br />
-          <input type="password" name="password" placeholder="password" value={this.state.password} 
+          <input type="password" name="password" class="form-control" placeholder="password" value={this.state.password} 
           onChange={this.handleChange} />
           <br />
           <br />
-          <input type="submit" value="Login!" />
+          <input type="submit" class="btn btn-default" value="Login!"  />
         </form>
       </div> 
 
